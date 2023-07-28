@@ -9,9 +9,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('TOKEN', 'django-insecure-123')
 
-DEBUG = True
+DEBUG = os.getenv('DEBUG_STATUS')
 
-ALLOWED_HOSTS = ['158.160.66.207', '127.0.0.1', 'bankai2ndsite.hopto.org']
+ALLOWED_HOSTS = os.getenv('IP', 'DOMAIN')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
