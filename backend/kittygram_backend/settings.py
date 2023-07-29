@@ -11,7 +11,7 @@ SECRET_KEY = os.getenv('TOKEN', 'django-insecure-123')
 
 DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = ['158.160.66.207', '127.0.0.1', 'bankai2ndsite.hopto.org']
+ALLOWED_HOSTS = os.getenv('DATA').split(' ')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
